@@ -1,0 +1,17 @@
+Refer to the schema. Write a query to display the customer mail details. Display the details in the below format.
+
+Give an alias name as CUSTOMER_MAIL_INFO. Sort the result in ascending order.
+
+For Example: 
+
+          Customer_id - 'CUST001'
+
+          Email_id - 'mano@hotmail.com'
+          
+          
+          
+          
+ 
+ 
+ SELECT CONCAT( customer_id, " mail id is ", email_id ) AS CUSTOMER_MAIL_INFO 
+FROM customers ORDER  BY CUSTOMER_MAIL_INFO ASC;
