@@ -1,0 +1,14 @@
+Write a query to display the list of bus numbers and names where the source and destination of a bus is the destination and source of another bus. Display the unique records in ascending order by bus_no.
+
+(Note: Evaluate only the respective query to get the desired result.
+
+
+
+
+
+select distinct b.bus_no, b.bus_name
+from buses b join(select s1.bus_no
+from schedule s1 join schedule s2
+on s1.source=s2.destination and s1.destination=s2.source) s
+on b.bus_no=s.bus_no
+order by bus_no;
